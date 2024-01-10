@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+     <title>Nu Gebeya</title>
+     <style> 
+      /* Add your custom CSS code here */ 
+       
+      /* Navigation */ 
+      nav { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 10px 20px; 
+        background-color: #f5f1f1; 
+        color: #0a0a0a; 
+      } 
+       
+      /* .logo-container { 
+        margin: 0 20px; 
+      } */ 
+       
+       .nav-links { 
+        display: flex; 
+        list-style: none; 
+      }  
+       
+      .nav-links li { 
+        margin: 0 10px; 
+      } 
+       
+      .nav-links li a { 
+        text-decoration: none; 
+        color: #0a0a0a; 
+      } 
+       
+      /* .icon-cart { 
+        position: relative; 
+      } 
+       
+      .icon-carts { 
+        width: 40px; 
+      } */ 
+       
+      /* .icon-cart span { 
+        position: absolute; 
+        top: -10px; 
+        right: -10px; 
+        background-color: red; 
+        color: #fff; 
+        border-radius: 50%; 
+        padding: 2px 5px; 
+        font-size: 12px; 
+      } */ 
+       
+/*  */ 
+ 
+.homeheader{ 
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    transition: background-color .5s ease; 
+    z-index: 1000; 
+    height: 75px; 
+    
+} 
+nav{ 
+    flex: 2; 
+    } 
+ 
+.logo-container{ 
+    flex: 3; 
+    position: relative; 
+ 
+    } 
+.span{ 
+    display: flex; 
+    width: 30PX; 
+    background-color: darkred; 
+}     
+ 
+.menucontainer{ 
+    width: 100%; 
+    max-width: 120rem; 
+    margin: 0 auto; 
+    padding: 0 1.5rem; 
+    display: flex; 
+} 
+.menucontainer{ 
+    display: flex; 
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    align-items: center; 
+    
+    height: 100px; 
+    } 
+ 
+.cart-size{ 
+  height: 30px; 
+  width: 30px; 
+ } 
+ .icon-cart{ 
+    flex: 3; 
+    position: relative; 
+    /* inline */ 
+ } 
+ 
+.icon-carts{ 
+ 
+    justify-content: center; 
+    align-items: center; 
+    right:20px; 
+    float: right; 
+    top:20%;  
+    margin-top: 20px; 
+    margin-right: 40px; 
+} 
+.icon-cart span{ 
+    display: flex; 
+    background-color: red; 
+    width: 20px; 
+    height: 20px; 
+    justify-content: center; 
+    align-items: center; 
+    color: #fff; 
+    border-radius: 50%; 
+    position: absolute; 
+    top: 55%; 
+    right: 32px; 
+} 
+ 
+nav ul{ 
+    flex: 2; 
+    } 
+ 
+.homelogocontainer{ 
+    flex: 3; 
+    } 
+ 
+.nav{ 
+    width: 100%; 
+    height: 10rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    transition: height .5s ease; 
+    list-style: none; 
+    float: right; 
+    } 
+ 
+     
+    .scrolling-active{ 
+    background-color:#BC9988; 
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1); 
+} 
+#table{ 
+     display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-column-gap: 20px; 
+  grid-row-gap: 20px; 
+  justify-content: space-around; 
+ margin-right: 5%; 
+   
+  margin-left: 5%; 
+  margin-bottom: 2%; 
+ 
+} 
+.tble1{ 
+    background-color: #BC9988; 
+    padding: 10px; 
+} 
+.tble3{ 
+    background-color: #E1C6B9; 
+    padding: 10px; 
+} 
+.tble2{ 
+    background-color: #FFF0E9; 
+    padding: 10px; 
+} 
+.bannerarea1{ 
+    width: 100%; 
+    height: 100vh; 
+    background: url("../images/banners/Shemane.jpg") center no-repeat; 
+    background-size: cover; 
+    position: relative; 
+} 
+ 
+.bannerarea2{ 
+    width: 100%; 
+    height: 100vh; 
+    background: url("../images/banners/pho.jpg") center no-repeat; 
+    background-size: cover; 
+    position: relative; 
+} 
+ 
+ 
+.bannerarea1::after{ 
+    content: ''; 
+    width: inherit; 
+    height: inherit; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    background-color: rgba(0,0,0,.5); 
+} 
+ 
+.logo{ 
+    height: 90px; 
+    width: 90px; 
+} 
+.wrap{ 
+    color: #FF3B3F; 
+     
+} 
+.homeintro{ 
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    padding-top: 20%; 
+    padding-left: 20%; 
+} 
+.homespan{ 
+    color: #FF3B3F; 
+    font-weight: 150px; 
+} 
+.homebtn{ 
+    background-color: #FF3B3F; 
+    margin: 10px; 
+    padding: 12px; 
+    padding-left:20px; 
+    padding-right: 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    font-weight: 30px; 
+    margin-left:
+    45%; 
+} 
+.homebtn2{ 
+    background-color: #FF3B3F; 
+    margin: 10px; 
+    padding: 12px; 
+    padding-left:20px; 
+    padding-right: 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    font-weight: 30px; 
+    margin-left: 45%; 
+    margin-top: 30%; 
+} 
+    
+ 
+ 
+ 
+ 
+ 
+      /* Grid Container */ 
+      .grid-container { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        grid-gap: 20px; 
+        margin: 20px; 
+      } 
+       
+      .grid-item { 
+        border: 1px solid #ccc; 
+        padding: 10px; 
+      } 
+       
+      .blogimgcont img { 
+        width: 100%; 
+        height: auto; 
+      } 
+       
+      .blogbtn { 
+        margin-top: 10px; 
+      } 
+       
+      /* Footer */ 
+      .footercontainer { 
+        display: flex; 
+        justify-content: space-between; 
+        padding: 20px; 
+        background-color: #333; 
+        color: #fff; 
+      } 
+       
+      .footer-about { 
+        flex: 1; 
+      } 
+       
+      .footer-social-media { 
+        flex: 1; 
+      } 
+       
+      .footer-qlink { 
+        flex: 1; 
+      } 
+       
+      .footer-subs { 
+        flex: 1; 
+      } 
+       
+      .footer-qlink a { 
+        text-decoration: none; 
+        color: #fff; 
+      } 
+       
+      .footer-qlink p { 
+        margin: 5px 0; 
+      } 
+       
+      .subs { 
+        display: flex; 
+        margin-top: 10px; 
+      } 
+       
+      .subs input { 
+        flex: 1; 
+        padding: 5px; 
+      } 
+       
+      .subs button { 
+        background-color: #fff; 
+        color: #333; 
+        border: none; 
+        padding: 5px 10px; 
+        cursor: pointer; 
+      } 
+       
+      /* Button to sort grid items */ 
+      .sort-button { 
+        margin: 20px; 
+      } 
+ 
+      .socials { 
+      width: 30px; 
+      height: 30px; 
+} 
+ 
+    </style>
+
+  </head>
+  <body>
+    <nav>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+     <div class="logo-container">
+    <a href="index.html"><img src="../images/logos/logo.png" width="80px" height="80px" class="logo"></a>
+    </div>
+      <ul class="nav-links">
+        <li><b><a href="index.html">Home</a></b></li>
+        <li><b><a href="shop.html">Shop</a></b></li>
+        <li><b><a href="about.html">About</a></b></li>
+        <li><b><a href="blog.html">Blog</a></b></li>
+        <li><b><a href="contact.html">Contact</a></b></li>
+        
+      </ul>
+  
+  <div class="icon-cart">
+   <a href="cart.html"><img src="../images/logos/cart-outline.svg" width='40px' class='icon-carts' ></a>
+    <span>0</span>
+  </div>
+</nav>
+<h2 align="center">Blog</h2>
+
+
+<div class="sort-options">
+  <label for="sort-select">Sort by:</label>
+  <select id="sort-select">
+      <option value="default">Default</option>
+      <option value="asc">Name: A-Z</option>
+      <option value="desc">Name: Z-A</option>
+  </select>
+</div>
+
+
+<div class="grid-container" id="gridContainer">
+  <div class="grid-item">
+    <div class="blogimgcont">
+      <img src="../images/firfir.jpeg">
+    </div>
+    <div class="blogprvw">
+    <h3>How to make Firfir</h3>
+    <p><b>Ingredients</b><br>
+2 large onions, chopped<br>
+1/4 cup vegetable oil<br>
+1-2 tablespoons berbere<br>
+<br>
+<button class="blogbtn"><a href="firfir.html">Continue reading</a></button>
+	</div>
+</div>
+ 
+ <div class="grid-item">
+    <div class="blogimgcont">
+      <img src="../images/habeshalbs.jpg">
+    </div>
+    <div class="blogprvw">
+    <h3>How the Habesha Libs Made</h3>
+    <p>The Habesha Kemis is a white hand-woven cotton clothing that is made from shemma. This is a cloth made by sewing together long strips  
+      <br></p>
+    
+<button class="blogbtn"><a href="taba.html">Continue reading</a></button>
+  </div>
+</div>
+
+<div class="grid-item">
+    <div class="blogimgcont">
+      <img src="../images/atse.jpeg">
+    </div>
+    <div class="blogprvw">
+    <h3>Who was Atse Yohannes</h3>
+    <p>Atse Yohannes IV was Emperor of Ethiopia from 1871 to his death in 1889 at the Battle of Gallabat, and king of Ethiopia from 1867 to 1871.</p>
+<button class="blogbtn"><a href="atsey.html">Continue reading</a></button>
+  </div>
+</div>
+
+
+<div class="grid-item">
+    <div class="blogimgcont">
+      <img src="../images/jew2.jpg">
+    </div>
+    <div class="blogprvw">
+    <h3>Facts about Ethiopian Jewelry</h3>
+    <p>Gold is esteemed in the Ethiopian society, being a popular gift for weddings, graduations ceremonies, child baptism, awards and other events.</p>
+<button class="blogbtn"><a href="opinion.html">Continue reading</a></button>
+  </div>
+</div>
+
+<div class="grid-item">
+    <div class="blogimgcont">
+      <img src="../images/gojobet.jpeg">
+    </div>
+    <div class="blogprvw">
+    <h3>Exploring Ethiopia's 'Gojo Bet'</h3>
+    <p>I walked through one of these gates and met an elderly grandmother and her granddaughters. We were invited into there gojo bet where I shot these photos of a home that  </p>
+<button class="blogbtn"><a href="review.html">Continue reading</a></button>
+  </div>
+</div>
+  
+</div>
+
+
+
+
+
+
+<div class="footercontainer">
+    <div class="footer-about">
+        <h2 class="outro-0" >ኑ ገበያ</h2>
+        <h3 class="outro-1">Your One Stop For Everything Ethiopian </h3>
+        <br>
+        <ul class="cta">
+          <li><a href="tel:+251912345678" class="socials"><img src="../images/logos/call.svg" class="socials">+251912345678</a></li>    
+           <li><a href="mailto:Ephrataaa@gmail.com" class="socials"><img src="../images/logos/mail.svg" class="socials">Support@nugebeya.com</a></li>  
+        </ul>
+    </div>
+    <div class="footer-social-media">
+      <h2>We're Social!</h2><br>
+        <ul class="social">
+            <li><a href="https://www.facebook.com/firdewsabrar.firdewsabrar"><img src="../images/logos/logo-facebook.svg" class="socials"></a></li>
+            <li><a href="https://www.instagram.com/_ephi__/"><img src="../images/logos/logo-instagram.svg" class="socials"></a></li>
+            <li><a href="https://twitter.com/Firdews58896750"><img src="../images/logos/logo-twitter.svg" class="socials"></a></li>
+            <li><a href=""><img src="../images/logos/logo-youtube.svg" class="socials"></a></li>
+        </ul>
+    </div>
+    
+    <div class="footer-qlink"> 
+   
+    <h2 align="center" class="footer-qlink">Quick links</h2>
+      <p><a href="about.html" class="bg">About</a></p>
+      <p><a href="blog.html" class="bg">Blog</a></p>
+      <p><a href="cart.html" class="bg">Cart</a></p>
+      <p><a href="contact.html" class="bg">Contact us</a></p>
+      <p><a href="contact.html#accordion" class="bg">FAQ</a></p>
+     </div>
+    <div class="footer-subs"> 
+      
+       <h2>Subscibe to our newsletter</h2>
+       <div class="subs">
+      <input type="email" placeholder="Email">
+      <button type="submit"> <strong>Subscribe</strong></button>
+      </div>
+    </div>
+  
+  </div>
+</footer>
+<script> 
+ // Get the necessary elements from the DOM
+const sortSelect = document.getElementById('sort-select');
+const gridContainer = document.getElementById('gridContainer');
+const gridItems = document.querySelectorAll('.grid-item');
+
+// Add an event listener to the sort select element
+sortSelect.addEventListener('change', () => {
+    const selectedOption = sortSelect.value;
+
+    // Sort the grid items based on the selected option
+    if (selectedOption === 'asc') {
+        const sortedItems = Array.from(gridItems).sort((a, b) => {
+            const titleA = a.querySelector('h3').textContent;
+            const titleB = b.querySelector('h3').textContent;
+            return titleA.localeCompare(titleB);
+        });
+
+        // Append the sorted items back to the container
+        gridContainer.innerHTML = '';
+        sortedItems.forEach(item => {
+            gridContainer.appendChild(item);
+        });
+    } else if (selectedOption === 'desc') {
+        const sortedItems = Array.from(gridItems).sort((a, b) => {
+            const titleA = a.querySelector('h3').textContent;
+            const titleB = b.querySelector('h3').textContent;
+            return titleB.localeCompare(titleA);
+        });
+
+        // Append the sorted items back to the container
+        gridContainer.innerHTML = '';
+        sortedItems.forEach(item => {
+            gridContainer.appendChild(item);
+        });
+    }
+});
+
+</script>
+
+
+
+
+  
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="store.js" async></script>
+    <script>
+        // Replace with your actual Stripe public key
+        var stripePublicKey = 'pk_test_51OX2RJH0EYz8XV5icsn9vn6movkseEPuXUt9TdKz26D1BFWzK9qOQJyAe4JtFHB18FmmAKJWHyqADri8EA5JkzHM002HRXOO8E';
+    
+        document.addEventListener('DOMContentLoaded', function() {
+          var stripe = Stripe(stripePublicKey);
+          var elements = stripe.elements();
+          var cardElement = elements.create('card');
+      
+          cardElement.mount('#card-element');
+      
+          var purchaseBtn = document.getElementById('purchase-btn');
+          purchaseBtn.addEventListener('click', function() {
+            stripe.createPaymentMethod({
+              type: 'card',
+              card: cardElement,
+            }).then(function(result) {
+              if (result.error) {
+                alert('Payment error: ' + result.error.message);
+              } else {
+                var paymentMethodId = result.paymentMethod.id;
+                stripe.confirmCardPayment('sk_test_51OX2RJH0EYz8XV5ir9GwA2dahntNfq7dBxgpZPhbEj8m4RFc8vlgUPDQztnpRADxPL472NHWhQlc91QGILYionTB00CEakWWqD', {
+                  payment_method: paymentMethodId,
+                }).then(function(result) {
+                  if (result.error) {
+                    alert('Payment error: ' + result.error.message);
+                  } else {
+                    alert('Payment successful');
+                    // Handle successful payment
+                  }
+                });
+              }
+            });
+          });
+        });
+      </script>
+    <title>Nu Gebeya</title>
+  </head>
+    <body>
+      <nav>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+     <div class="logo-container">
+    <a href="index.html"><img src="../images/logos/logo.png" width="80px" height="80px" class="logo"></a>
+    </div>
+      <ul class="nav-links">
+        <li><b><a href="index.html">Home</a></b></li>
+        <li><b><a href="shop.html">Shop</a></b></li>
+        <li><b><a href="about.html">About</a></b></li>
+        <li><b><a href="blog.html">Blog</a></b></li>
+        <li><b><a href="contact.html">Contact</a></b></li>
+        
+      </ul>
+  
+  <div class="icon-cart">
+   <a href="cart.html"><img src="../images/logos/cart-outline.svg" width='40px' class='icon-carts' ></a>
+    <span>0</span>
+  </div>
+</nav>
+        <header class="main-header">
+        </header>
+
+
+        <div class="sort-options">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+                <option value="default">Default</option>
+                <option value="low-to-high">Price: Low to High</option>
+                <option value="high-to-low">Price: High to Low</option>
+            </select>
+        </div>
+        
+
+        <section class="container content-section">
+            <h2 class="section-header">Shop</h2>
+            <div class="shop-items">
+                <div class="shop-item" class="grid-item jewelry">
+                    <span class="shop-item-title"></span>
+                    <img class="shop-item-image" src="../images/download (1).jpeg" alt="Avatar" style="width:100%">
+                    <h3 class="shop-item-title">Dirkosh</h3>
+                    <div class="shop-item-details">
+                        Birr&nbsp;<span class="shop-item-price">  400</span>
+                        <button class="btn shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title"></span>
+                    <img class="shop-item-image" src="../images/habeshalbs.jpg" alt="Avatar" style="width:100%">
+                    <h3 class="shop-item-title">Habesha Libs</h3>
+                    <div class="shop-item-details">
+                        Birr&nbsp;<span class="shop-item-price">  5000</span>
+                        <button class="btn shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title"></span>
+                    <img class="shop-item-image" src="../images/jew2.jpg" alt="Avatar" style="width:100%">
+                    <h3 class="shop-item-title">Ambar</h3>
+                    <div class="shop-item-details">
+                        Birr&nbsp;<span class="shop-item-price">  500</span>
+                        <button class="btn shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title"></span>
+                    <img class="shop-item-image" src="../images/HTB1GHs6PVXXXXapXVXXq6xXFXXXD.jpg" alt="Avatar" style="width:100%">
+                    <h3 class="shop-item-title">Habel</h3>
+                    <div class="shop-item-details">
+                        Birr&nbsp;<span class="shop-item-price">  600</span>
+                        <button class="btn shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title"></span>
+                    <img class="shop-item-image" src="../images/download (2).jpeg" alt="Avatar" style="width:100%">
+                    <h3 class="shop-item-title">Berbere</h3>
+                    <div class="shop-item-details">
+                        Birr&nbsp;<span class="shop-item-price">  300</span>
+                        <button class="btn shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title"></span>
+                    <img class="shop-item-image" src="../images/download.jpeg" alt="Avatar" style="width:100%">
+                    <h3 class="shop-item-title">Male Habesha Libs </h3>
+                    <div class="shop-item-details">
+                        Birr&nbsp;<span class="shop-item-price">  3400</span>
+                        <button class="btn shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title"></span>
+                    <img class="shop-item-image" src="../images/1_da4b07d6-4908-4cc5-8457-b5e4f525510f.webp" alt="Avatar" style="width:100%">
+                    <h3 class="shop-item-title">Shiro</h3>
+                    <div class="shop-item-details">
+                        Birr&nbsp;<span class="shop-item-price">  600</span>
+                        <button class="btn shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title"></span>
+                    <img class="shop-item-image" src="../images/ethiopian-traditional-clothes-habesha-kemise-25.jpg" alt="Avatar" style="width:100%">
+                    <h3 class="shop-item-title">Habesha Dress</h3>
+                    <div class="shop-item-details">
+                        Birr&nbsp;<span class="shop-item-price">  4000</span>
+                        <button class="btn shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+        <section class="container content-section">
+            <h3 class="section-header">Cart</h3>
+            <div class="cart-row">
+                <h6><span class="cart-item cart-header cart-column">Item</span></h6>
+                  <h6><span class="cart-price cart-header cart-column">Price</span></h6>
+                  <h6><span class="cart-quantity cart-header cart-column">Quantity</span></h6>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <h6><strong class="cart-total-title">Total</strong></h6>
+                <h6><span class="cart-total-price">$0</span></h6>
+            </div>
+            <button class="btn-purchase" type="button">Purchase</button>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+  <br><br>
+<div class="footercontainer">
+    <div class="footer-about">
+        <h2 class="outro-0" >ኑ ገበያ</h2>
+        <h3 class="outro-1">Your One Stop For Everything Ethiopian </h3>
+        <br>
+        <ul class="cta">
+          <li><a href="tel:+251912345678" class="socials"><img src="../images/logos/call.svg" class="socials">+251912345678</a></li>    
+           <li><a href="mailto:Ephrataaa@gmail.com" class="socials"><img src="../images/logos/mail.svg" class="socials">Support@nugebeya.com</a></li>  
+        </ul>
+    </div>
+    <div class="footer-social-media">
+      <h2>We're Social!</h2><br>
+        <ul class="social">
+            <li><a href="https://www.facebook.com/firdewsabrar.firdewsabrar"><img src="../images/logos/logo-facebook.svg" class="socials"></a></li>
+            <li><a href="https://www.instagram.com/_ephi__/"><img src="../images/logos/logo-instagram.svg" class="socials"></a></li>
+            <li><a href="https://twitter.com/Firdews58896750"><img src="../images/logos/logo-twitter.svg" class="socials"></a></li>
+            <li><a href=""><img src="../images/logos/logo-youtube.svg" class="socials"></a></li>
+        </ul>
+    </div>
+    
+    <div class="footer-qlink"> 
+   
+    <h2 align="center" class="footer-qlink">Quick links</h2>
+      <p><a href="about.html" class="bg">About</a></p>
+      <p><a href="blog.html" class="bg">Blog</a></p>
+      <p><a href="cart.html" class="bg">Cart</a></p>
+      <p><a href="contact.html" class="bg">Contact us</a></p>
+      <p><a href="contact.html#accordion" class="bg">FAQ</a></p>
+     </div>
+    <div class="footer-subs"> 
+      
+       <h2>Subscibe to our newsletter</h2>
+       <div class="subs">
+      <input type="email" placeholder="Email">
+      <button type="submit"> <strong>Subscribe</strong></button>
+      </div>
+    </div>
+  
+  </div>
+</footer>
+
+
+   
+   
+  <script src="app.js"></script>
+
+  </body>
+</html>
+       
+    </body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    
+    <title>Nu Gebeya</title>
+<style>
+/* CSS for the navigation */
+/* CSS for the navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* CSS for the contact form */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form input,
+.form textarea {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* CSS for the accordion */
+#accordion {
+  margin-top: 20px;
+}
+
+.accordion {
+  background-color: #f1f1f1;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.accordion:hover {
+  background-color: #ddd;
+}
+
+.panel {
+  padding: 10px;
+  display: none;
+  background-color: white;
+}
+
+/* CSS for the footer */
+.footercontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.footercontainer > * {
+  margin-right: 20px;
+}
+
+.footercontainer h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footercontainer a {
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.footercontainer .socials {
+  width: 20px;
+}
+
+.footer-subs input {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.footer-subs button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* CSS for the footer social media icons */
+.footer-social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social-media h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.social li {
+  margin-right: 10px;
+}
+
+.social a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+}
+
+.social img {
+  width: 20px;
+  height: 20px;
+}
+
+
+</style>
+
+
+  </head>
+  <body>
+    <nav>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+     <div class="logo-container">
+    <a href="index.html"><img src="../images/logos/logo.png" width="80px" height="80px" class="logo"></a>
+    </div>
+      <ul class="nav-links">
+        <li><b><a href="index.html">Home</a></b></li>
+        <li><b><a href="shop.html">Shop</a></b></li>
+        <li><b><a href="about.html">About</a></b></li>
+        <li><b><a href="blog.html">Blog</a></b></li>
+        <li><b><a href="contact.html">Contact</a></b></li>
+        
+      </ul>
+  
+  <div class="icon-cart">
+   <a href="cart.html"><img src="../images/logos/cart-outline.svg" width='40px' class='icon-carts' ></a>
+    <span>0</span>
+  </div>
+</nav>
+
+<div class="contact">
+    <div class="footer-social-media">
+      <h2>We're Social!</h2><br>
+        <ul class="social">
+            <li><a href="https://www.facebook.com/firdewsabrar.firdewsabrar"><img src="../images/logos/logo-facebook.svg" class="socials"></a></li>
+            <li><a href="https://www.instagram.com/_ephi__/"><img src="../images/logos/logo-instagram.svg" class="socials"></a></li>
+            <li><a href="https://twitter.com/Firdews58896750"><img src="../images/logos/logo-twitter.svg" class="socials"></a></li>
+            <li><a href=""><img src="../images/logos/logo-youtube.svg" class="socials"></a></li>
+        </ul>
+    </div>
+    <div class="cont">
+    <form class="form">
+         <h3>Tell us what you think</h2>
+        <lable for="name">Name</lable>
+        <input type="text" name="name" placeholder="name" required><br><br> 
+        <lable for="name">Email</lable> 
+       <input type="email"  placeholder="Email"><br><br>
+       <lable for="message" valign="top">Message</lable> <br><br>
+       <textarea id= "text" name="text" rows="5" cols="60" placeholder="Don't be shy, write us something."></textarea><br><br>
+      <button align=center >Submit</button>
+ 
+</form>
+</div>
+</div>
+<br><br>
+<div id="accordion">
+<h2> &emsp;Frequently Asked Questions</h2>
+<button class="accordion">What's Nu Gebeya</button>
+<div class="panel">
+  <p>Nu Gebeya is a shop dedicated to promoting the Ethiopian rich, diverse, and historic culture.</p>
+</div>
+<br>
+<button class="accordion">What do Nu Gebeya Sells</button>
+<div class="panel">
+  <p>Some of the products displayed are cultural clothes, accessories, books, (baltena) products, traditional furniture and ware products, and decorations.</p>
+</div>
+<br>
+<button class="accordion">Who makes your product?</button>
+<div class="panel">
+  <p>Nu Gebeya partners with individuals and organizations who are showcasing their products at Nu Gebeya. We value creativity and quality products as it reflects who we are as a business.</p>
+</div>
+<br>
+<button class="accordion">What's your impact?</button>
+<div class="panel">
+  <p>Nu Gebeya was started with the mission to promote our culture and give platform to emerging artists while giving an excellent user experiance for our customers.</p>
+</div>
+</div>
+
+ <br><br><br>
+<div class="footercontainer">
+    <div class="footer-about">
+        <h2 class="outro-0" >ኑ ገበያ</h2>
+        <h3 class="outro-1">Your One Stop For Everything Ethiopian </h3>
+        <br>
+        <ul class="cta">
+          <li><a href="tel:+251912345678" class="socials"><img src="../images/logos/call.svg" class="socials">+251912345678</a></li>    
+           <li><a href="mailto:Ephrataaa@gmail.com" class="socials"><img src="../images/logos/mail.svg" class="socials">Support@nugebeya.com</a></li>  
+        </ul>
+    </div>
+    <div class="footer-social-media">
+      <h2>We're Social!</h2><br>
+        <ul class="social">
+            <li><a href="https://www.facebook.com/firdewsabrar.firdewsabrar"><img src="../images/logos/logo-facebook.svg" class="socials"></a></li>
+            <li><a href="https://www.instagram.com/_ephi__/"><img src="../images/logos/logo-instagram.svg" class="socials"></a></li>
+            <li><a href="https://twitter.com/Firdews58896750"><img src="../images/logos/logo-twitter.svg" class="socials"></a></li>
+            <li><a href=""><img src="../images/logos/logo-youtube.svg" class="socials"></a></li>
+        </ul>
+    </div>
+    
+    <div class="footer-qlink"> 
+   
+    <h2 align="center" class="footer-qlink">Quick links</h2>
+      <p><a href="about.html" class="bg">About</a></p>
+      <p><a href="blog.html" class="bg">Blog</a></p>
+      <p><a href="cart.html" class="bg">Cart</a></p>
+      <p><a href="contact.html" class="bg">Contact us</a></p>
+      <p><a href="contact.html#accordion" class="bg">FAQ</a></p>
+     </div>
+    <div class="footer-subs"> 
+      
+       <h2>Subscibe to our newsletter</h2>
+       <div class="subs">
+      <input type="email" placeholder="Email">
+      <button type="submit"> <strong>Subscribe</strong></button>
+      </div>
+    </div>
+  
+  </div>
+</footer>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
